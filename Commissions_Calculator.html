@@ -63,64 +63,79 @@
     
 
     <script type="text/javascript">
-        //Function for currency
-    const format = function(num){
-    return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-}
-        //Brokerage inputs - Annual Fee / Sale Transaction Fee / Lease Transaction Fee
-        const input17 = 399;
-        $('#input17').text(input17);
-        const input18 = 500;
-        $('#input18').text(input18);
-        const input19 = 150;
-        $('#input19').text(input19);
-        const input20 = 12000;
-        $('#input20').text(input20);
-        $("input").change(function () {
-            let in1 = Number($('#input1').val());
-            let in2 = Number($('#input2').val());
-            let in3 = Number($('#input3').val());
-            let in4 = Number($('#input4').val());
-            let in5 = Number($('#input5').val());
-            let in6 = Number($('#input6').val());
-            let in7 = Number($('#input7').val());
-            let in8 = Number($('#input8').val());
-            let in9 = Number($('#input9').val());
-            let in10 = Number($('#input10').val());
-            let in11 = Number($('#input11').val());
-            let in12 = Number($('#input12').val());
-            let in13 = Number($('#input13').val());
-            let in14 = Number($('#input14').val());
-            let in15 = Number($('#input15').val());
-            let in16 = Number($('#input16').val());
+    //Function for currency
+    const format_money = function(num){
+        let n = Number(num);
+    return "$" + n.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    }
 
-        let out, out2, out3, out4, out5, out6 = 0;
+    //input initialization
+    let in1 = 0;
+    let in2 = 0
+    let in3 = 0;
+    let in4 = 0;
+    let in5 = 0;
+    let in6 = 0;
+    let in7 = 0;
+    let in8 = 0;
+    let in9 = 0;
+    let in10 = 0;
+    let in11 = 0;
+    let in12 = 0;
+    let in13 = 0;
+    let in14 = 0;
+    let in15 = 0;
+    let in16 = 0;
+        //Brokerage inputs - Annual Fee / Sale Transaction Fee / Lease Transaction Fee
+        const in17 = 399;
+        $('#input17').text(in17);
+        const in18 = 500;
+        $('#input18').text(in18);
+        const in19 = 150;
+        $('#input19').text(in19);
+        const in20 = 12000;
+        $('#input20').text(in20);
+
+        //Input #1 auto-format
+        $('#input1').change( () => {
+                in1 = $('#input1').val();
+                $('#input1').val(format_money(in1));
+            })
+
+        //main calculation function
+        $("input").change(function () {
+            let out, out2, out3, out4, out5, out6 = 0;
+
+            //Current Net Income calc
             if (in1 !== NaN && in2 !== NaN && in3 !== NaN && in4 !== NaN && in5 !== NaN && in6 !== NaN) {
                 out = ((in1*in2*in3)+(in4*in5*in6))
-                $('#out').html(format (out));
+                $('#out').html(format_money(out));
 
             }
+            //Total Fees with current broker calc
             if (in4 !== NaN && in7 !== NaN && in8 !== NaN && in9 !== NaN && in10 !== NaN && in11 !== NaN && in13 !==NaN){
                 (out2 = (((in7*12)+in8)+Math.min(((in9*out)+(in10*out))+((in11*in1)+(in12*in4)),in13)))
-                $('#out2').html(format(out2));
-
-            
+                $('#out2').html(format_money(out2));
             }
+            //Net with current broker calc
             if (out !== NaN && out2 !== NaN) {
                 out3 = (out - out2)
-                $('#out3').html(format(out3));
+                $('#out3').html(format_money(out3));
             }
+            //Fees at JPAR calc
             if (in1 !== NaN && in4 !== NaN){
                 out4 = (in17 + Math.min(((in1*in18) + (in4*in19)), in20))
-                    $('#out4').html(format(out4));
+                    $('#out4').html(format_money(out4));
             }
+            //Net Income with JPAR calc
             if (out4 !== NaN && out !== NaN) {
                 out5 = (out4 - out)
-                $('#out5').html(format(out5));
+                $('#out5').html(format_money(out5));
             }
+            //Savings calc
             if(out4 !== NaN && out2 !== NaN){
                 out6 = (out2 - out4)
-                $('#out6').html(format(out6));
+                $('#out6').html(format_money(out6));
             }
             
     })
