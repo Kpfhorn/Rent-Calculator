@@ -109,7 +109,14 @@
     //Function for currency
     const format_money = function(num){
         let n = Number(num);
-    return "$" + n.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        return "$" + n.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    }
+    const convert_percentage = function(num){
+        let n = Number(num);
+        return n / 100;
+    }
+    const format_percentage = function(num){
+        return num + "%";
     }
 
     //input initialization
