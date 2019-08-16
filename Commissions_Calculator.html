@@ -189,33 +189,39 @@
             $('#input6').val(format_percentage(tmp));
         })
 
+        //monthly fees to broker
         $('#input7').change( () => {
             in7 = read('#input7');
             $('#input7').val(format_money(in7));
         })
 
+        //annual fees to broker
         $('#input8').change( () => {
             in8 = read('#input8');
             $('#input8').val(format_money(in8));
         })
 
+        //percentage broker
         $('#input9').change( () => {
             let tmp = read('#input9');
             in9 = convert_percentage(tmp);
             $('#input9').val(format_percentage(tmp));
         })
 
+        //percentage franchise
         $('#input10').change( () => {
             let tmp = read('#input10');
             in10 = convert_percentage(tmp);
             $('#input10').val(format_percentage(tmp));
         })
 
+        //sales transaction fee
         $('#input11').change( () => {
             in11 = read('#input11');
             $('#input11').val(format_money(in11));
         })
 
+        //lease transaction fee
         $('#input12').change( () => {
             in12 = read('#input12');
             $('#input12').val(format_money(in12));
