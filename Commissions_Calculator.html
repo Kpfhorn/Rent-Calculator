@@ -119,6 +119,42 @@
     <div class="output-container">
         <label> What you're saving</label>
         <label id="out6">0</label>
+    </div><br />
+
+
+    <div class="input-container">
+        <label>Additional Sales Closed with Tools</label>
+        <input type="text" id="input21" /><br/>
+    </div>
+
+    <div class="output-container">
+        <label> Additional GCI</label>
+        <label id="out7">0</label>
+    </div>
+
+    <div class="output-container">
+        <label> Additional Transaction Fees to JPAR</label>
+        <label id="out8">0</label>
+    </div>
+
+    <div class="output-container">
+        <label> Net after new closings</label>
+        <label id="out9">0</label>
+    </div><br />
+
+    <div class="input-container">
+        <label>Return on Investment Multiplier</label>
+        <input type="text" id="input22" /><br/>
+    </div>
+
+    <div class="output-container">
+        <label> Net after Re-investing JPAR Savings</label>
+        <label id="out10">0</label>
+    </div><br />
+
+    <div class="output-container">
+        <label> Net after "What If" #1 AND #2</label>
+        <label id="out11">0</label>
     </div>
 
     <script type="text/javascript">
@@ -163,6 +199,8 @@
     let in14 = 0;
     let in15 = 0;
     let in16 = 0;
+    let in21 = 0;
+    let in22 = 0;
         //Brokerage inputs - Annual Fee / Sale Transaction Fee / Lease Transaction Fee
         const in17 = 399;
         //$('#input17').text(in17);
@@ -172,7 +210,8 @@
         //$('#input19').text(in19);
         const in20 = 12000;
         //$('#input20').text(in20);
-        
+        const in23 = .5;
+
         //Input processing
         $('#input1').change( () => {
             in1 = read('#input1');
@@ -263,9 +302,18 @@
             $('#input16').val(format_percentage(tmp));
         })
 
+        $('#input21').change( () => {
+            in21 = read('#input21');
+        })
+
+        $('#input22').change( () => {
+            in22 = read('#input22');
+        })
+
+
         //main calculation function
         $("input").change(function () {
-            let out, out2, out3, out4, out5, out6 = 0;
+            let out, out2, out3, out4, out5, out6, out7, out8, out9, out10, out11 = 0;
 
             //Current Net Income calc
             if (in1 !== NaN && in2 !== NaN && in3 !== NaN && in4 !== NaN && in5 !== NaN && in6 !== NaN) {
