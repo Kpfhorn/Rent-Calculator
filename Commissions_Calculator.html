@@ -14,96 +14,96 @@
 
 <body>
     <div class="input-container">
-        <h1>Residential Sale Sides</h1>
+        <label>Residential Sale Sides</label>
         <input type="text" id="input1" />
     </div>
 
     <div class="input-container">
-        <h1>Average Sale Amount</h1>
+        <label>Average Sale Amount</label>
         <input type="text" id="input2" />
     </div>
     <div class="input-container">
-        <h1>Average Sale Commission %</h1>
+        <label>Average Sale Commission %</label>
         <input type="text" id="input3" />
     </div>
     <div class="input-container">
-        <h1>Residential Lease Sides</h1>
+        <label>Residential Lease Sides</label>
         <input type="text" id="input4" />
     </div>
     <div class="input-container">
-        <h1>Average Lease Amount</h1>
+        <label>Average Lease Amount</label>
         <input type="text" id="input5" />
     </div>
     <div class="input-container">
-        <h1>Average Lease Commission %</h1>
+        <label>Average Lease Commission %</label>
         <input type="text" id="input6" />
     </div>
     <div class="output-container">
-        <h1>Current Net Income</h1>
-        <h1 id="out">0</h1><br />
+        <label>Current Net Income</label>
+        <label id="out">0</label><br />
     </div>
 
     <div class="input-container">
-        <h1>Monthly fees to broker</h1>
+        <label>Monthly fees to broker</label>
         <input type="text" id="input7" />
     </div>
     <div class="input-container">
-        <h1>Annual fees to broker</h1>
+        <label>Annual fees to broker</label>
         <input type="text" id="input8" />
     </div>
     <div class="input-container">
-        <h1>Precentage Broker Takes</h1>
+        <label>Precentage Broker Takes</label>
         <input type="text" id="input9" />
     </div>
     <div class="input-container">
-        <h1>Percentage Franchise Takes</h1>
+        <label>Percentage Franchise Takes</label>
         <input type="text" id="input10" />
     </div>
     <div class="input-container">
-        <h1>Sale Transaction Fee</h1>
+        <label>Sale Transaction Fee</label>
         <input type="text" id="input11" />
     </div>
     <div class="input-container">
-        <h1>Lease Transaction Fee</h1>
+        <label>Lease Transaction Fee</label>
         <input type="text" id="input12" />
     </div>
     <div class="input-container">
-        <h1>Broker Cap</h1>
+        <label>Broker Cap</label>
         <input type="text" id="input13" />
     </div>
     <div class="input-container">
-        <h1>Sale Transaction Fee After Cap</h1>
+        <label>Sale Transaction Fee After Cap</label>
         <input type="text" id="input14" />
     </div>
     <div class="input-container">
-        <h1>Lease Transaction Fee After Cap</h1>
+        <label>Lease Transaction Fee After Cap</label>
         <input type="text" id="input15" />
     </div>
     <div class="input-container">
-        <h1>Percentage After Cap</h1>
+        <label>Percentage After Cap</label>
         <input type="text" id="input16" /><br/>
     </div>
 
     <div class="output-container">
-        <h1>Total Fees with your broker</h1>
-        <h1 id="out2">0</h1>
+        <label>Total Fees with your broker</label>
+        <label id="out2">0</label>
     </div>
     <div class="output-container">
-        <h1>Net with your broker</h1>
-        <h1 id="out3">0</h1><br />
+        <label>Net with your broker</label>
+        <label id="out3">0</label><br />
     </div>
 
     <div class="output-container">
-        <h1>What fees you would pay at JPAR</h1>
-        <h1 id="out4">0</h1>
+        <label>What fees you would pay at JPAR</label>
+        <label id="out4">0</label>
     </div>
     <div class="output-container">
-        <h1>What your Net Income with us</h1>
-        <h1 id="out5">0</h1>
+        <label>What your Net Income with us</label>
+        <label id="out5">0</label>
     </div>
     <div class="output-container">
-        <h1> What you're saving</h1>
-        <h1 id="out6">0</h1>
+        <label> What you're saving</label>
+        <label id="out6">0</label>
     </div>
 
     <script type="text/javascript">
@@ -139,18 +139,18 @@
     let in16 = 0;
         //Brokerage inputs - Annual Fee / Sale Transaction Fee / Lease Transaction Fee
         const in17 = 399;
-        $('#input17').text(in17);
+        //$('#input17').text(in17);
         const in18 = 500;
-        $('#input18').text(in18);
+        //$('#input18').text(in18);
         const in19 = 150;
-        $('#input19').text(in19);
+        //$('#input19').text(in19);
         const in20 = 12000;
-        $('#input20').text(in20);
+        //$('#input20').text(in20);
 
         //Input #2 auto-format
         $('#input2').change( () => {
-                in1 = $('#input2').val();
-                $('#input2').val(format_money(in1));
+                in2 = $('#input2').val();
+                $('#input2').val(format_money(in2));
             })
 
         //main calculation function
