@@ -175,6 +175,7 @@
         num = num.replace(',', '');
         num = num.replace('$', '');
         num = num.replace('%', '');
+        num = Number(num);
         return num;
     }
 
@@ -338,7 +339,7 @@
             }
             //Net Income with JPAR calc
             if (out4 !== NaN && out !== NaN) {
-                out5 = (out4 - out)
+                out5 = (out-out4)
                 $('#out5').html(format_money(out5));
             }
             //Savings calc
