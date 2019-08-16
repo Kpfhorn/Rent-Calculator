@@ -1,4 +1,3 @@
-
 header {
 	color: white;
 	text-align: center;
@@ -21,7 +20,8 @@ footer{
 }
 
 input {
-    border-radius: 5px;
+    border-radius: 10px;
+    text-align: center;
 }
 .output-container {
     font-weight: bold;
@@ -29,4 +29,15 @@ input {
     font-size: 20px;
     margin: 10px;
     font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif;
+}
+
+.section-container{
+    background-color: #dddddd;
+    border-radius: 10px;
+    padding: 1px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
 }
