@@ -1,2 +1,6 @@
 *.zip
 *.xlsx
+node_modules
+server.js
+package-lock.json
+package.json
