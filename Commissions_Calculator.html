@@ -135,6 +135,17 @@
         return num + "%";
     }
 
+    const cleanup = function(num){
+        num = num.replace(',', '');
+        num = num.replace('$', '');
+        num = num.replace('%', '');
+        return num;
+    }
+
+    const read = function(id){
+        return cleanup($(id).val());
+    }
+
     //input initialization
     let in1 = 0;
     let in2 = 0
@@ -161,12 +172,90 @@
         //$('#input19').text(in19);
         const in20 = 12000;
         //$('#input20').text(in20);
+        
+        //Input processing
+        $('#input1').change( () => {
+            in1 = read('#input1');
+        })
 
-        //Input #2 auto-format
         $('#input2').change( () => {
-                in2 = $('#input2').val();
-                $('#input2').val(format_money(in2));
-            })
+            in2 = read('#input2');
+            $('#input2').val(format_money(in2));
+        })
+
+        $('#input3').change( () => {
+            let tmp = read('#input3');
+            in3 = convert_percentage(tmp);
+            $('#input3').val(format_percentage(tmp));
+        })
+
+        $('#input4').change( () => {
+            in4 = read('#input4');
+        })
+
+        $('#input5').change( () => {
+            in5 = read('#input5');
+            $('#input5').val(format_money(in5));
+        })
+
+        $('#input6').change( () => {
+            let tmp = read('#input6');
+            in6 = convert_percentage(tmp);
+            $('#input6').val(format_percentage(tmp));
+        })
+
+        $('#input7').change( () => {
+            in7 = read('#input7');
+            $('#input7').val(format_money(in7));
+        })
+
+        $('#input8').change( () => {
+            in8 = read('#input8');
+            $('#input8').val(format_money(in8));
+        })
+
+        $('#input9').change( () => {
+            let tmp = read('#input9');
+            in9 = convert_percentage(tmp);
+            $('#input9').val(format_percentage(tmp));
+        })
+
+        $('#input10').change( () => {
+            let tmp = read('#input10');
+            in10 = convert_percentage(tmp);
+            $('#input10').val(format_percentage(tmp));
+        })
+
+        $('#input11').change( () => {
+            in11 = read('#input11');
+            $('#input11').val(format_money(in11));
+        })
+
+        $('#input12').change( () => {
+            in12 = read('#input12');
+            $('#input12').val(format_money(in12));
+        })
+
+        $('#input13').change( () => {
+            in13 = read('#input13');
+            $('#input13').val(format_money(in13));
+        })
+
+        $('#input14').change( () => {
+            in14 = read('#input14');
+            $('#input14').val(format_money(in14));
+        })
+
+        $('#input15').change( () => {
+            in15 = read('#input15');
+            $('#input15').val(format_money(in15));
+        })
+
+        $('#input16').change( () => {
+            let tmp = read('#input16');
+            in16 = convert_percentage(tmp);
+            $('#input16').val(format_percentage(tmp));
+        })
 
         //main calculation function
         $("input").change(function () {
