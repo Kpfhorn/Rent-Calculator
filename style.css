@@ -19,7 +19,7 @@ input {
     border-radius: 5px;
 }
 .output-container {
-    text-transform: bold;
+    font-weight: bold;
     text-align: center;
     font-size: 20px;
     margin: 10px;
