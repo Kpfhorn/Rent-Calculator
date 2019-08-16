@@ -99,28 +99,28 @@
         <div class="input-container">
             <h3>Your numbers</h3>
             <label>Residential Sale Sides</label>
-            <input type="text" id="input1" />
+            <input type="text" id="input1" value="10" />
         </div>
 
         <div class="input-container">
             <label>Average Sale Amount</label>
-            <input type="text" id="input2" />
+            <input type="text" id="input2" value="$350,000.00" />
         </div>
         <div class="input-container">
             <label>Average Sale Commission %</label>
-            <input type="text" id="input3" />
+            <input type="text" id="input3" value="3%" />
         </div>
         <div class="input-container">
             <label>Residential Lease Sides</label>
-            <input type="text" id="input4" />
+            <input type="text" id="input4" value="3" />
         </div>
         <div class="input-container">
             <label>Average Lease Amount</label>
-            <input type="text" id="input5" />
+            <input type="text" id="input5" value="$1,500.00"/>
         </div>
         <div class="input-container">
             <label>Average Lease Commission %</label>
-            <input type="text" id="input6" />
+            <input type="text" id="input6" value="40%"/>
         </div>
         <div class="output-container">
             <label>Current Net Income</label>
@@ -131,31 +131,31 @@
         <div class="input-container">
             <h3>What you pay now</h3>
             <label>Monthly fees to broker</label>
-            <input type="text" id="input7" />
+            <input type="text" id="input7" value="$149.00" />
         </div>
         <div class="input-container">
             <label>Annual fees to broker</label>
-            <input type="text" id="input8" />
+            <input type="text" id="input8" value="$0.00" />
         </div>
         <div class="input-container">
             <label>Precentage Broker Takes</label>
-            <input type="text" id="input9" />
+            <input type="text" id="input9" value="0%"/>
         </div>
         <div class="input-container">
             <label>Percentage Franchise Takes</label>
-            <input type="text" id="input10" />
+            <input type="text" id="input10" value="0%" />
         </div>
         <div class="input-container">
             <label>Sale Transaction Fee</label>
-            <input type="text" id="input11" />
+            <input type="text" id="input11" value="$399.00" />
         </div>
         <div class="input-container">
             <label>Lease Transaction Fee</label>
-            <input type="text" id="input12" />
+            <input type="text" id="input12" value="$99.00" />
         </div>
         <div class="input-container">
             <label>Broker Cap</label>
-            <input type="text" id="input13" />
+            <input type="text" id="input13" value="$24,000.00" />
         </div>
         <!-- <div class="input-container">
         <label>Sale Transaction Fee After Cap</label>
@@ -196,7 +196,7 @@
         <div class="input-container">
             <h3>What If #1: Close Additional Sales</h3>
             <label>Additional Sales Closed with Tools</label>
-            <input type="text" id="input17" /><br />
+            <input type="text" id="input17" value="2" /><br />
         </div>
 
         <div class="output-container">
@@ -218,7 +218,7 @@
         <div class="input-container">
             <h3>What If #2: Reinvest Your Savings</h3>
             <label>Return on Investment Multiplier</label>
-            <input type="text" id="input18" /><br />
+            <input type="text" id="input18" value="1.5" /><br />
         </div>
 
         <div class="output-container">
@@ -289,7 +289,7 @@
         //$('#input18').text(saleTrFee);
         const leaseTrFee = 150;
         //$('#input19').text(leaseTrFee);
-        const brokerCap = 12000;
+        const brokerCap = 13000;
         //$('#input20').text(brokerCap);
 
         //Input processing
@@ -460,6 +460,7 @@
             }
 
         })
+        $('input').change();
     </script>
 </body>
 
